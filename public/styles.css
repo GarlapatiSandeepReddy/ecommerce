@@ -1,0 +1,33 @@
+.card-layout{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.card{
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+}
+.errorMessage{
+    font-size: x-small;
+    color: red;
+}
+.header-tab{
+    display: flex;
+    justify-content: space-around;
+}
+.heading{
+    flex-grow: 1;
+}
+.heading-nav{
+    flex-grow: 3;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 4rem;
+}
+.hide-button-layout{
+    border: none;
+    outline: none;
+    background-color: white;
+}
