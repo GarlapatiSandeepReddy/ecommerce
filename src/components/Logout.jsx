@@ -11,6 +11,7 @@ function Logout() {
             localStorage.removeItem('token');
             console.log("Token cleared from local storage");
             // Redirect or perform further actions
+            
         } catch (error) {
             console.error('Logout failed:', error);
         }

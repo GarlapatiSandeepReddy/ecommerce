@@ -1,20 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import url from "../constants";
-import Login from "./Login";
 
 function Header(props){
     const userData = props.userData;
-
-    async function handleLogout(){
+    const navigate = useNavigate();
+    async function handleLogout(event){
         console.log("In handle Logout")
         try {
+            event.preventDefault()
             await axios.get(url + "logout");
             // Clear token from localStorage
             localStorage.removeItem('token');
             console.log("Token cleared from local storage");
             // Redirect or perform further actions
-            return <Login />;
+            navigate('/login', {replace: true});
+
         } catch (error) {
             console.error('Logout failed:', error);
         }

@@ -55,7 +55,7 @@ function Login(){
             if(status === 0){
                 setIsLoggedIn(true);
                 localStorage.setItem('token', response.jwtToken);
-                navigate('/home');
+                navigate('/home', {state: {userData : response}, replace: true});
             }else{
                 onLoginFailure(loginResponse.status)
             }
